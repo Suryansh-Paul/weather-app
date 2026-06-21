@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#89f7fe,#66a6ff);
+}
+
+
+
+.weatherform{
+    margin-bottom:35px;
+}
+
+.cityinput{
+    width:280px;
+    padding:14px 18px;
+    font-size:18px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:white;
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.cityinput:focus{
+    transform:translateY(-2px);
+    box-shadow:0 12px 22px rgba(0,0,0,0.2);
+}
+
+button{
+    margin-left:12px;
+    padding:14px 22px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    color:white;
+    background:linear-gradient(135deg,#00c853,#43e97b);
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+
+
+.card{
+    width:360px;
+    min-height:500px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        to bottom,
+        #7ec8ff 0%,
+        #b7e7ff 45%,
+        #ffe7a8 100%
+    );
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+    color:#222;
+
+    animation:fade .4s ease;
+}
+
+
+.cityDisplay{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.tempDisplay{
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.humidityDisplay{
+    font-size:22px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+.descDisplay{
+    font-size:30px;
+    font-style:italic;
+    font-weight:600;
+    margin-bottom:25px;
+    text-transform:capitalize;
+}
+
+.weatherEmoji{
+    font-size:90px;
+    margin-bottom:20px;
+}
+
+.errorDisplay{
+    font-size:28px;
+    font-weight:600;
+    text-align:center;
+    margin-top:120px;
+    color:#333;
+}
+
+
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
