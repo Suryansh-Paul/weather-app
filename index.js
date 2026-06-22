@@ -8,12 +8,19 @@ weatherform.addEventListener("submit", async event =>{
     event.preventDefault(); 
     const city = cityinput.value
        if(city.trim()){
-        
+         try {
             const weatherdata = await getweatherdata(city);
             displayweatherinfo(weatherdata);
             
-        
-       }}     
+         } catch (error) {
+            console.error(error);
+            displayerror(error.message);
+         }
+      }
+      else{
+        displayerror("please enter a valid city");
+      }
+}
 );
 async function getweatherdata(city) {
 
@@ -106,5 +113,19 @@ function weatheremoji(weatherid){
 }
 
 
+
+
+function displayerror(message){
+
+  const errordisplay = document.createElement("p");
+  errordisplay.textContent=message;
+  errordisplay.classList.add("errorDisplay");
+
+  card.textContent="";
+  card.style.display = "flex";
+  card.appendChild(errordisplay);
+   
+
+}
 
 
